@@ -9,11 +9,35 @@ We will extend **Product** to hold some extra attributes, we will also extend **
 ![Data Model](OfficeCoERD.png?raw=true)
 
 
-We will create a new extension, initally using **extegen** and then using an **installer recipe**.
-1. Create a local directory for your Commerce installation
-2. Copy the Commerce installtion zip file to this location
-3. Unzip this file
-4. Navigate to  
-5. `
-6. <your directory>
-7. `
+## Item Types
+
+1. Edit the items.xml file in your new extension, at  `<your directory>\hybris\bin\custom\offico\resources\officeco-items.xml`
+2. Add an `itemtypes` section  `<itemtypes><itemtypes/>`
+3. Within this section add :
+    * Extend Product
+    * Create OfficeBooking, which extends VariantProduct
+    * Create new item type Office
+    * Create new item type OfficeGroup
+
+## Enums
+
+1. Add an `enums` section  `<itemtypes><itemtypes/>` at the top of the file, first entry after `<items`
+2. Within this section add :
+    * Create new enum for BookingDuration, values `ONE_HOUR,TWO_HOURS,HALF_DAY,FULL_DAY`
+    * Create new enum for RoomType, values `GENERIC,CONFERENCE,CLASSROOM`
+
+## Relations
+
+1. Add an `relations` section  `<relations><relations/>` , first entry after `<enums>`
+2. Within this section add :
+    * Create new relationship for Meeting Rooms 2 Office, (1 to Many) `
+    * Create new relationship for Office to Office Group ( 1 to Many)
+
+## Validation
+
+1. Use the Eclipse Hybris Plugin to validate the items.xml
+
+## Build and update
+
+1. Run `ant all` 
+2. Perform an `Update`
