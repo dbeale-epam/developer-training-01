@@ -51,8 +51,7 @@ We now want to create a new extenstion
 
 ## Eclipse Setup
 
-1. Download and install the latest version of Eclipse from [here](https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers)
+1. Download and install the latest version of Eclipse from [here](https://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-java-ee-developers)
 2. Click on this [link](https://marketplace.eclipse.org/content/sap-hybris-commerce-development-tools-eclipse) and drag the "Install" button onto your Eclipse IDE
 3. Choose File->Import-> [y] hybris -> Import Platform
 4. Point to the location of your **bin/platform** folder, ensure 'Tomcat start/stop multi-thread' option is disabled
-   
