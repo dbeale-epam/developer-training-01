@@ -10,7 +10,8 @@ We will create a new extension, initally using **extegen** and then using an **i
 3. Unzip this file
 4. Navigate to  `<your directory>\hybris\bin\platform`
 5. Set environment variables by runnining either `. ./setantenv.sh` or `setantenv.bat`
-6. Review the files, specifically `localextensions.xml`  
+6. Run `ant all`
+7. Review the files, specifically `localextensions.xml`  
 
 ## Start
 
