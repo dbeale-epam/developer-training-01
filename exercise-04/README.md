@@ -1,5 +1,5 @@
 # Exercise 04 - Loading Essential & Project Data
-## Expected Duration - 30 Minutes
+## Expected Duration - 45 Minutes
 
 We now want to populate our data model at initialise and update time
 
@@ -47,3 +47,17 @@ INSERT_UPDATE OfficeBooking;code[unique=true];roomDuration(code);baseProduct(cod
 
 5. Rebuild and carry out an update - verify that the data has been loaded
 6. Now modify the Project Data file to include data for OfficeGroup
+
+## Backoffice Administration
+
+1. Now configure your application to enable  Backffice Administration - edit `localextensions.xml` and include :
+
+```
+ <extension name='platformbackoffice' />
+ ```
+ 2. Now rebuild and update and view backoffice at `https://localhost:9002/backoffice` using `admin/nimda`
+ 3. View your newly created catalog and products
+
+## FlexibleSearch
+
+ 1.  Within HAC create a FlexibleSearch query to return all products for an office 
