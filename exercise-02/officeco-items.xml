@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<enumtypes>  
+      <enumtype code="BookingDuration" autocreate="true" generate="true" dynamic="false">
+          <value code="ONE_HOUR" />
+          <value code="TWO_HOURS" />
+          <value code="HALF_DAY" />
+          <value code="FULL_DAY" />
+      </enumtype>
+   
+   	<enumtype code="RoomType" autocreate="true" generate="true" dynamic="true">
+          <value code="GENERIC" />
+          <value code="CONFERENCE" />
+          <value code="CLASSROOM" />
+    </enumtype>
+    
+   </enumtypes>  
+	
+	<relations>
+      <relation code="MeetingRooms2Office" autocreate="true" generate="false" localized="false">
+          <sourceElement qualifier="meetingRoom" type="Product" cardinality="one"  >
+              <modifiers read="true" write="true" search="true" optional="true" />
+          </sourceElement>
+          <targetElement qualifier="office" type="Office" cardinality="many" collectiontype="set" ordered="false">
+              <modifiers read="true" write="true" search="true" optional="true" />
+           </targetElement>
+      </relation>
+      <relation code="Office2OfficeGroup" autocreate="true" generate="false" localized="false">
+          <sourceElement qualifier="office" type="Office" cardinality="one">
+              <modifiers read="true" write="true" search="true" optional="true" />
+          </sourceElement>
+          <targetElement qualifier="officeGroup" type="OfficeGroup" cardinality="many" collectiontype="set" ordered="false">
+              <modifiers read="true" write="true" search="true" optional="true" />
+          </targetElement>
+      </relation>
+  </relations>
+ 
+	
+	<itemtypes>
+	
+	    <itemtype generate="false" code="Product" autocreate="false">
+	      <attributes>
+	        <attribute qualifier="maxPeople" type="java.lang.Integer">
+	          <description>Maximum number of people this meeting room can accommodate</description>
+	          <persistence type="property" />
+	          <defaultvalue>0</defaultvalue>
+	        </attribute>
+	        <attribute qualifier="hasProjector" type="java.lang.Boolean">
+	          <description>Does this meeting room have a projector</description>
+	          <persistence type="property" />
+	          <defaultvalue>Boolean.FALSE</defaultvalue>
+	        </attribute>
+	        <attribute qualifier="roomType" type="RoomType">
+	          <description>What type of room is this</description>
+	          <persistence type="property" />
+	        </attribute>
+	      </attributes>
+	    </itemtype>
+	    
+	    <itemtype generate="true" code="OfficeBooking" extends="VariantProduct" autocreate="true">
+	      <attributes>
+	        <attribute qualifier="duration" type="BookingDuration">
+	          <description>Maximum number of people this meeting room can accommodate</description>
+	          <persistence type="property" />
+	        </attribute>
+	      </attributes>
+	    </itemtype>
+	    
+	    
+	    <itemtype generate="true" code="Office" autocreate="true">
+        <deployment table="Office" typecode="30010" />
+        <attributes>
+            <attribute qualifier="code" type="java.lang.String">
+                <description>short unique code of office</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="name" type="java.lang.String">
+                <description>name of office</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="address1" type="java.lang.String">
+                <description>First address line</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="address2" type="java.lang.String">
+                <description>Second address line</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="town" type="java.lang.String">
+                <description>Town where office is</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="postcode" type="java.lang.String">
+                <description>postcode of  office</description>
+                <persistence type="property" />
+            </attribute>
+        </attributes>
+    	</itemtype>
+   
+ 	   <itemtype generate="true" code="OfficeGroup" autocreate="true">
+        	<deployment table="OfficeGroup" typecode="30020" />
+    	    <attributes>
+	            <attribute qualifier="code" type="java.lang.String">
+	                <description>short unique code of office</description>
+	                <persistence type="property" />
+	            </attribute>
+	            <attribute qualifier="name" type="java.lang.String">
+	                <description>name of office</description>
+	                <persistence type="property" />
+	            </attribute>
+	            <attribute qualifier="manager" type="java.lang.String">
+	                <description>Name of Manager</description>
+	                <persistence type="property" />
+	            </attribute>	
+	         </attributes>
+    	</itemtype>
+
+
+
+	  
+	 </itemtypes>
+</items>
