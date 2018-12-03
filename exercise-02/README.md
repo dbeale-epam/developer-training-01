@@ -35,8 +35,7 @@ We will extend **Product** to hold some extra attributes, we will also extend **
 
 ## Validation
 
-1. Compare against ![](officeco-items.xml)
-
+1. Compare against [officeco-items.xml](officeco-items.xml)
 2. Use the Eclipse Hybris Plugin to validate the items.xml
 
 ## Build and update
