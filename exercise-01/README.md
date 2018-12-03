@@ -35,7 +35,7 @@ We will create a new extension, initally using **extegen** and then using an **i
 
 We now want to create a new extenstion
 
-1. Run `ant extegent`, choose `yempty` as template, name `OfficeCo`, package `org.officeco`
+1. Run `ant extgen`, choose `yempty` as template, name `OfficeCo`, package `org.officeco`
 2. Browse the folders, you will notice a new `custom` folder created, with `OfficeCo`
 3. We now have to add our new extension to `config/localextensions.xml`
 4. Add the following block to the file
