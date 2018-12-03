@@ -12,12 +12,9 @@ Then we will create files to initialise all of the data entities and ensure load
 ```
 INSERT_UPDATE Office;code[unique=true];name;address1;address2;town; postcode
 ;RG1;Reading Centre;13 London Street;Northern Park; Reading; RG54 43T
-;LD1;London West;1 Blagrave Road;Lewisham, London; W1 4ZG
+;LD1;London West;1 Blagrave Road;Lewisham; London; W1 4ZG
 ```
 
-2. Using the impex loader within HAC, attempt to import and correct any errors
-3. Using HAC, run a flex query to view the loaded data
-
-## Essential & Peoject Data
-
+1. Using the impex loader within HAC, attempt to import and correct any errors
+2. Using HAC, run a flex query to view the loaded data
 
