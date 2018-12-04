@@ -1,7 +1,8 @@
 # Exercise 05 - Service Layer
 ## Expected Duration - 60 Minutes
 
-WWe will create DAOs, Service and Facade to access our data
+We will create DAOs, Service and Facade to access our data
+There are two requirements - Find all Offices - which return a list of Offices and FindOfficeByCode - which will return once specific Office
 
 ## DAO
 
