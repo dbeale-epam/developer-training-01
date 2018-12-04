@@ -3,7 +3,14 @@
 
 Create a Facade that will implement public methods for getting all Offices and a single Office by code
 
-1. Create a new DTO class with Spring XML for the required fields
+1. Create a new DTO class with Spring XML for the required fields, as below
+
+```xml
+<bean class="org.officeco.data.office">
+	<property name="code" type="String"/>
+</bean>
+```
+
 2. Create a new folder within `src` called facades
 3. Create a interface for your facade
 4. Provide two public methods as for getting one office and getting all offices
