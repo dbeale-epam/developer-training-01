@@ -8,4 +8,4 @@ Use Mockito to simulate the OfficeDAO implementation
 2. Mock out the DAO 
 3. Write to test `GetOffice()` and `GetAllOffice()`
 4. Compare to [DefaultOfficeServiceUnitTest.java](DefaultOfficeServiceUnitTest.java)
-5. 
+5. Execute the test via Ant `ant unittests –Dtestclasses.packages=org.officeco.*`
