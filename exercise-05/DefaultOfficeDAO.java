@@ -9,7 +9,8 @@ import org.officeco.model.OfficeModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component(value = "OfficeDAO")
+
+@Component(value = "officeDAO")
 public class DefaultOfficeDAO implements OfficeDAO
 {
     /**
@@ -17,7 +18,7 @@ public class DefaultOfficeDAO implements OfficeDAO
      */
     @Autowired
     private FlexibleSearchService flexibleSearchService;
-    
+
 	/**
 	 * Finds all Offices by performing a FlexibleSearch using the {@link FlexibleSearchService}.
 	 */
@@ -38,7 +39,7 @@ public class DefaultOfficeDAO implements OfficeDAO
 		// Return the list of OfficeModels.
         return flexibleSearchService.<OfficeModel> search(query).getResult();
     }
-    
+
 	/**
 	 * Finds all Offices by given code by performing a FlexibleSearch using the {@link FlexibleSearchService}.
 	 */

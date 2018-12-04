@@ -17,3 +17,15 @@ There are two requirements - Find all Offices - which return a list of Offices a
 3.  Compare against [OfficeService.java](OfficeService.java) and  [DefaultOfficeService.java](DefaultOfficeService.java)
    
 ## Spring Configuration
+1. Our DAO has used annotation to tell Spring to define a bean   - `@Component(value = "OfficeDAO")` 
+2. A modification to `resources\officeco-spring.xml` to scan for this annotation, after inital `beans` tag
+```
+<context:component-scan base-package="org.officeco"/>
+```
+3. Register the Office Service, and configure to use of DefaultOfficeDAO
+```xml
+<alias name = "defaultOfficeService" alias = "officeService" />
+<bean id = "defaultOfficeService" class = "org.officeco.service.DefaultOfficeService" >
+<property name = "officeDAO" ref = "officeDAO" />
+</bean>
+```
