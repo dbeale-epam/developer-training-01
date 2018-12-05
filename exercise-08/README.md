@@ -3,7 +3,7 @@
 
 Create two pages, one to show a list of the office another to show the details of a selected office
 
-1. Create a Controller class `OfficeController.java` at `officeco/web/src/org/offico/controller`
+1. Create a Controller class `OfficeController.java` at `officeco/web/src/org/officeco/controller`
 2. Handle the requests for `/offices` and `offices/{code}`
 3. Compare your code to [OfficeController.java](OfficeController.java)
 4. Create a new JSP file `OfficeList.jsp` at `officeco/web/webroot/WEB-INF/views`
