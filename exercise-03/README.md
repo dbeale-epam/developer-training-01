@@ -1,8 +1,7 @@
 # Exercise 03 - Importing Data
 ## Expected Duration - 60 Minutes
 
-First we will manually import data into one of the new item types, Office.
-Then we will create files to initialise all of the data entities and ensure loaded as part of essential data
+Manually import data into one of the new item types, Office.
 
 ## Impex
 
