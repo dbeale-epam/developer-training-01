@@ -15,5 +15,4 @@
 * [Exercise 8   - Front-End](https://github.com/dbeale-epam/developer-training-01/tree/master/exercise-08)
 * [Exercise 9   - Scripts](https://github.com/dbeale-epam/developer-training-01/tree/master/exercise-09)
 * [Exercise 10  - Accelerator creation](https://github.com/dbeale-epam/developer-training-01/tree/master/exercise-10)
-* [Exercise 11  - Addon](https://github.com/dbeale-epam/developer-training-01/tree/master/exercise-11)
-
+* 
