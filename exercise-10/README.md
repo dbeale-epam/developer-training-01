@@ -14,7 +14,7 @@ Create your own version of the B2C Accelerator and initialise with sample data
 7. Provide a name, e.g. `eetraining`
 8. Provide a package name , e.g. `org.eetraining`
 9. This will have created a series of series of new extensions within your `custom` directory
-10. Edit your `localextensions.xml` file, replace names of template extensions with the names of your 7 newly created extensions, e.g. `yacceleratorstorefront` to `eetrainingstorefront`
+10. Edit your `localextensions.xml` file, replace names of template extensions with the names of your 7 newly created extensions, e.g. `yacceleratorstorefront` to `eetrainingstorefront` (Remove any other yaccelerator* extensions)
 11. Re-install the B2C Accelerator Addons
 ```
 ant reinstall_addons -Dtarget.storefront=eetrainingstorefront
@@ -46,4 +46,3 @@ http://electronics.local:9001/trainingstorefront/
 http://apparel-uk.local:9001/trainingstorefront/
 http://apparel-de.local:9001/trainingstorefront/
 ```
-
